@@ -31,6 +31,7 @@ class Config {
       useJit: core.getInput('use-jit') === 'true',
       runnerGroupId: parseInt(core.getInput('runner-group-id') || '1', 10),
       runnerDebug: core.getInput('runner-debug') === 'true',
+      enclaveOptions: core.getInput('enclave-options') === 'true',
     };
 
     // Get the AWS_REGION environment variable

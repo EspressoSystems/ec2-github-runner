@@ -157,6 +157,13 @@ inputs:
       and step-by-step script execution logs.
     required: false
     default: 'false'
+  enclave-options:
+    description: >-
+      Enable AWS Nitro Enclave support on the EC2 instance.
+      When 'true', passes EnclaveOptions: { Enabled: true } to the
+      RunInstances API call. The instance type must support Nitro Enclaves.
+    required: false
+    default: 'false'
 outputs:
   label:
     description: >-
