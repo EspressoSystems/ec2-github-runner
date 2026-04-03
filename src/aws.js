@@ -233,6 +233,7 @@ async function createEc2InstanceWithParams(imageId, subnetId, securityGroupId, l
     InstanceMarketOptions: buildMarketOptions(),
     MetadataOptions: Object.keys(config.input.metadataOptions).length > 0 ? config.input.metadataOptions : undefined,
     EnclaveOptions: config.input.enclaveOptions ? { Enabled: true } : undefined,
+    InstanceInitiatedShutdownBehavior: 'terminate',
   };
 
   if (config.input.ec2VolumeSize !== '' || config.input.ec2VolumeType !== '') {
